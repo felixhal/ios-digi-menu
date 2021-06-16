@@ -28,13 +28,17 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JhP-Pl-3YV">
                                 <rect key="frame" x="0.0" y="155" width="320" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="JhP-Pl-3YV" firstAttribute="top" secondItem="gNW-rF-bbO" secondAttribute="bottom" constant="30" id="z8l-Fc-iMg"/>
+                            <constraint firstItem="gNW-rF-bbO" firstAttribute="leading" secondItem="yjQ-aQ-vez" secondAttribute="leading" id="UoU-XS-NBr"/>
+                            <constraint firstItem="JhP-Pl-3YV" firstAttribute="centerX" secondItem="yjQ-aQ-vez" secondAttribute="centerX" id="VZ4-nh-WoI"/>
+                            <constraint firstItem="gNW-rF-bbO" firstAttribute="top" secondItem="yjQ-aQ-vez" secondAttribute="top" id="aMs-Jq-4Dg"/>
+                            <constraint firstAttribute="trailing" secondItem="gNW-rF-bbO" secondAttribute="trailing" id="lPx-DM-MUS"/>
+                            <constraint firstItem="JhP-Pl-3YV" firstAttribute="top" secondItem="gNW-rF-bbO" secondAttribute="bottom" constant="30" id="x9I-Ws-umJ"/>
                         </constraints>
                     </stackView>
                 </subviews>

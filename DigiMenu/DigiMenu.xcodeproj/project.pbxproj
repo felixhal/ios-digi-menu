@@ -28,6 +28,7 @@
 		047A03F6264E92970000B270 /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A03F5264E92970000B270 /* BrowseViewController.swift */; };
 		047A03FF264E993D0000B270 /* CookingStepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A03FE264E993D0000B270 /* CookingStepsViewController.swift */; };
 		047A0402264E99600000B270 /* CookCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A0401264E99600000B270 /* CookCompleteViewController.swift */; };
+		FA7D686F805466B8835082A8 /* Pods_DigiMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5424A5B2BD2194D445E403E6 /* Pods_DigiMenu.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,9 @@
 		047A03F5264E92970000B270 /* BrowseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
 		047A03FE264E993D0000B270 /* CookingStepsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingStepsViewController.swift; sourceTree = "<group>"; };
 		047A0401264E99600000B270 /* CookCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookCompleteViewController.swift; sourceTree = "<group>"; };
+		1D9400CDD24476DB4A4EE51C /* Pods-DigiMenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigiMenu.release.xcconfig"; path = "Target Support Files/Pods-DigiMenu/Pods-DigiMenu.release.xcconfig"; sourceTree = "<group>"; };
+		5424A5B2BD2194D445E403E6 /* Pods_DigiMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DigiMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D4FDA030BECF753D97ACEDC /* Pods-DigiMenu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigiMenu.debug.xcconfig"; path = "Target Support Files/Pods-DigiMenu/Pods-DigiMenu.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA7D686F805466B8835082A8 /* Pods_DigiMenu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +104,8 @@
 			children = (
 				0382EBCE263950700083A360 /* DigiMenu */,
 				0382EBCD263950700083A360 /* Products */,
+				38A12E7F5F3D34417F7415C4 /* Pods */,
+				8FC9DABCC83E93F2A081C9F9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,6 +143,24 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		38A12E7F5F3D34417F7415C4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8D4FDA030BECF753D97ACEDC /* Pods-DigiMenu.debug.xcconfig */,
+				1D9400CDD24476DB4A4EE51C /* Pods-DigiMenu.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8FC9DABCC83E93F2A081C9F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5424A5B2BD2194D445E403E6 /* Pods_DigiMenu.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,9 +168,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0382EBE3263950720083A360 /* Build configuration list for PBXNativeTarget "DigiMenu" */;
 			buildPhases = (
+				22DB518760988935E220E24D /* [CP] Check Pods Manifest.lock */,
 				0382EBC8263950700083A360 /* Sources */,
 				0382EBC9263950700083A360 /* Frameworks */,
 				0382EBCA263950700083A360 /* Resources */,
+				9FEB2948AE7604C910329ECF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -201,6 +228,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		22DB518760988935E220E24D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DigiMenu-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FEB2948AE7604C910329ECF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DigiMenu/Pods-DigiMenu-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DigiMenu/Pods-DigiMenu-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DigiMenu/Pods-DigiMenu-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0382EBC8263950700083A360 /* Sources */ = {
@@ -367,6 +436,7 @@
 		};
 		0382EBE4263950720083A360 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D4FDA030BECF753D97ACEDC /* Pods-DigiMenu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -385,6 +455,7 @@
 		};
 		0382EBE5263950720083A360 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D9400CDD24476DB4A4EE51C /* Pods-DigiMenu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

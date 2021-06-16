@@ -1,0 +1,10 @@
+platform :ios, '13.0'
+
+target 'DigiMenu' do
+  use_frameworks!
+
+  # Pods for DigiMenu
+  
+  pod 'SDWebImage'
+  
+end

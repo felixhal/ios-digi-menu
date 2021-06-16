@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class MealByIngredientsViewController: UITableViewController {
     
@@ -14,7 +15,7 @@ class MealByIngredientsViewController: UITableViewController {
     var avIngredientsReq = "";
     var mealSumManager = MealSumManager();
     var menuManager = MenuManager();
-
+    
     override func viewDidLoad() {
         super.viewDidLoad();
         //Register custom cell ("MealCell") to be used instead of custom cells
@@ -32,11 +33,13 @@ class MealByIngredientsViewController: UITableViewController {
 
     //Set the format and contents of each cell
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "mealDisplayCell", for: indexPath) as! MealCell;
-        cell.mealName.text = mealList[indexPath.row].mealName;
-        cell.mealImage.load(url: URL(string: mealList[indexPath.row].mealImg)!);
         
-        return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "mealDisplayCell", for: indexPath) as! MealCell;
+        cell.mealImage.image = nil;
+        cell.mealImage.sd_imageIndicator = SDWebImageActivityIndicator.gray
+        cell.mealImage.sd_imageIndicator = SDWebImageProgressIndicator.`default`
+        cell.mealImage.sd_setImage(with: URL(string: mealList[indexPath.row].mealImg)!, completed: nil)
+        return cell;
     }
     
     //MARK - TableView Delegate Methods
@@ -70,4 +73,3 @@ extension MealByIngredientsViewController: MealSumManagerDelegate {
         print(error);
     }
 }
-
