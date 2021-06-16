@@ -39,6 +39,7 @@ class MealByIngredientsViewController: UITableViewController {
         cell.mealImage.sd_imageIndicator = SDWebImageActivityIndicator.gray
         cell.mealImage.sd_imageIndicator = SDWebImageProgressIndicator.`default`
         cell.mealImage.sd_setImage(with: URL(string: mealList[indexPath.row].mealImg)!, completed: nil)
+        cell.mealName.text = mealList[indexPath.row].mealName;
         return cell;
     }
     
